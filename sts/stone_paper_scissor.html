@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="txt">WELCOME TO GAME</div> <br>\
+        <div id="txt">choose between three images</div>
+        <div id="img_wrap">
+            <div onclick="game(this.id)" id="rock"></div>
+            <div onclick="game(this.id)" id="paper"></div>
+            <div onclick="game(this.id)" id="scissor"></div>
+            
+        </div>
+        <div  id="match" style="font-size: 20px;">click on </div>
+        <div onclick="comp()" id="match">Match</div>
+
+        <div id="result">
+            <div id ="myimg"></div>
+            <div id ="winner"></div>
+            <div id="cmpimg"></div>
+        </div>
+
+    </body>
+
+    <script>
+        tmp = ""
+        tmp1=""
+        function game(i)
+        {
+           
+            tmp=i
+            document.getElementById('myimg').style.backgroundImage=`url(pic/${tmp}.png)`;
+            document.getElementById('myimg').style.backgroundSize="200px";
+            document
+            
+            
+
+        }
+
+        function comp()
+        {
+            var x =Math.floor( Math.random() * 3)
+            if (x==0)
+            {
+                tmp1="rock"
+            }
+            else if(x==1)
+            {
+                tmp1="paper"
+            }
+            else
+            {
+                tmp1="scissor"
+            }
+            document.getElementById('cmpimg').style.backgroundImage=`url(pic/${tmp1}.png)`;
+            document.getElementById('cmpimg').style.backgroundSize="200px";
+           
+            if(tmp=='paper')
+            {
+                if(tmp1=='scissor')
+                {
+                    document.getElementById('winner').innerHTML="scissor is winner"
+                    document.getElementById('cmpimg').style.backgroundColor="green";
+                    document.getElementById('myimg').style.backgroundColor="red";
+                }
+                else if(tmp1=='rock')
+                {
+                    document.getElementById('winner').innerHTML="paper is winner"
+                    document.getElementById('myimg').style.backgroundColor="green";
+                    document.getElementById('cmpimg').style.backgroundColor="red";
+                }
+                else
+                {
+                    document.getElementById('winner').innerHTML="Match Tied"
+                    document.getElementById('myimg').style.backgroundColor="green";
+                    document.getElementById('cmpimg').style.backgroundColor="green";
+                }
+
+            }
+
+            if(tmp=='rock')
+            {
+                if(tmp1=='paper')
+                {
+                    document.getElementById('winner').innerHTML="paper is winner"
+                    document.getElementById('cmpimg').style.backgroundColor="green";
+                    document.getElementById('myimg').style.backgroundColor="red";
+                }
+                else if(tmp1=='scissor')
+                {
+                    document.getElementById('winner').innerHTML="rock is winner"
+                    document.getElementById('cmpimg').style.backgroundColor="red";
+                    document.getElementById('myimg').style.backgroundColor="green";
+                }
+                else
+                {
+                    document.getElementById('winner').innerHTML="Match Tied"
+                    document.getElementById('myimg').style.backgroundColor="green";
+                    document.getElementById('cmpimg').style.backgroundColor="green";
+                }
+            }      
+
+            if(tmp=='scissor')
+            {
+                if(tmp1=='paper')
+                {
+                    document.getElementById('winner').innerHTML="scissor is winner"
+                    document.getElementById('cmpimg').style.backgroundColor="red";
+                    document.getElementById('myimg').style.backgroundColor="green";
+                }
+                else if(tmp1=='rock')
+                {
+                    document.getElementById('winner').innerHTML="rock is winner"
+                    document.getElementById('cmpimg').style.backgroundColor="green";
+                    document.getElementById('myimg').style.backgroundColor="red";
+                }
+                else
+                {
+                    document.getElementById('winner').innerHTML="Match Tied"
+                    document.getElementById('myimg').style.backgroundColor="green";
+                    document.getElementById('cmpimg').style.backgroundColor="green";
+                }
+            }          
+        }
+          
+
+
+    </script>  
+</html>
