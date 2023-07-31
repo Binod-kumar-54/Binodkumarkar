@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.phbox{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    
+}
+.phbox2{
+    float: left;
+    margin: 10px;
+}
