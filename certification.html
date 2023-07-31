@@ -113,7 +113,15 @@
             <a class="other" href="AADHAR.jpg"><img src="AADHAR.jpg" alt="" height="500" width="250" class="my-4 mx-5">
             </a>
         </div>
-
+        <div id="bca" style=" display: none;">
+            <a href="firstsem.jpg"><img src="firstsem.jpg" alt="" height="250" width="400" class="my-4 mx-5"></a>
+            <a href="secondsem.jpg"><img src="secondsem.jpg" alt="" height="250" width="400" class="my-4 mx-5"></a>
+            <a href="thirdsem.jpg"><img src="thirdsem.jpg" alt="" height="250" width="400" class="my-4 mx-5"></a>
+            <a href="fourthsem.jpg"><img src="fourthsem.jpg" alt="" height="250" width="400" class="my-4 mx-5"></a>
+            <a href="fifthsem.jpg"><img src="fifthsem.jpg" alt="" height="250" width="400" class="my-4 mx-5"></a>
+            <a href="sixthsem.jpg"><img src="sixthsem.jpg" alt="" height="250" width="400" class="my-4 mx-5"></a>
+            <a href="provisional.jpg"><img src="provisional.jpg" alt="" height="250" width="400" class="my-4 mx-5"></a>
+        </div>
        
     </div>
 
@@ -170,6 +178,15 @@
 
     function other() {
         var x = document.getElementById('other');
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function bca() {
+        var x = document.getElementById('bca');
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
