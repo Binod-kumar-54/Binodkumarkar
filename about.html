@@ -11,6 +11,17 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="mywebsitestyle.css">
     <title>Binod Kumar</title>
+    <style>
+        #imgbox{
+            height: 300px;
+            width: 250px;
+            overflow: hidden;
+        }
+        #imgbox:hover img{
+            scale: 1.2;
+            transition: all ease 1s;
+        }
+    </style>
 </head>
 
 <body>
@@ -69,7 +80,9 @@
         <div class="container my-5" style="text-align: left;">
             <h1>About me : </h1> <br>
             <h4 class="text-primary">Click on Image to Get My Resume . </h4><br>
-            <a target="_blank" href="binodresume.pdf"><img src="binod.jpg" alt="" height="300" width="250"></a>
+            <div id="imgbox">
+                <a target="_blank" href="binodresume.pdf"><img src="binod.jpg" alt="" height="300" width="250"></a>
+            </div>
             <p> Binod kumar kar </p>
 
             <br>
